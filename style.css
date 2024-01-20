@@ -1,0 +1,227 @@
+/* .display-4 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap; 
+  margin: auto; 
+  letter-spacing: 0.05em; 
+  animation: typing 3.5s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+/* @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+} */
+
+/* The typewriter cursor effect */
+/* @keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+} */
+.jumbotron {
+  padding-top: 7%;
+  background-color: #7752fe;
+  /* -ms-flex-align: baseline; */
+  /* text-align: center; */
+}
+.jumbotron img {
+  justify-content: center;
+}
+.scrolling-text {
+  position: fixed;
+  text-align: center;
+  transform: translate(-25%, -10%);
+  white-space: nowrap;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  transition: transform 0.5s ease-in-out;
+}
+body {
+  padding-left: 1px;
+  padding-right: 0;
+  /* margin-right: 0; */
+  min-height: 1900px;
+  width: 100%;
+  overflow-x: hidden;
+  margin-right: 10px;
+  background-color: #c2d9ff;
+  background-repeat: repeat;
+}
+/* .display-4 {
+  align-items: start;
+}
+.lead {
+  align-items: start;
+} */
+
+#moments {
+  background-color: #7752fe;
+}
+
+.photo-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  /* background-color: rgba(0, 255, 76, 0.273); */
+
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+.photo {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.photo:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  background-color: #7752fe;
+  font-weight: bolder;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.display-4 {
+  font-weight: 400;
+}
+.ig {
+  text-decoration: none;
+}
+.ig a :hover {
+  text-emphasis: none;
+  text-underline-offset: none;
+}
+nav {
+  padding: 5px;
+  position: fixed;
+  top: 0;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+}
+/* nav ul {
+  overflow-x: hidden;
+} */
+nav ul {
+  display: flex;
+  align-content: space-around;
+}
+nav a:hover {
+  font-weight: bold;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+  list-style-type: none;
+}
+.Box-saran {
+  border-radius: 15px;
+  outline: outset;
+  color: rgb(1, 2, 2);
+  background-color: darkgrey;
+}
+
+.contact {
+  text-align: center;
+  padding-top: 5rem;
+}
+form {
+  text-align: justify;
+  padding-bottom: 5rem;
+}
+.contactmine {
+  padding-top: 5rem;
+  text-align: center;
+}
+footer {
+  font-weight: lighter;
+}
+
+html {
+  padding: none;
+  flex-wrap: wrap;
+}
+#navbarNav {
+  color: white;
+}
+#changingWord {
+  font-size: 24px;
+  color: white;
+  position: relative;
+  text-align: center;
+  animation: forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+.glitch {
+  animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  5%,
+  10%,
+  15%,
+  20%,
+  25%,
+  30%,
+  35%,
+  40%,
+  45%,
+  50%,
+  55%,
+  60%,
+  65%,
+  70%,
+  75%,
+  80%,
+  85%,
+  90%,
+  95% {
+    transform: translate(-2px, 2px);
+  }
+  9%,
+  19%,
+  29%,
+  39%,
+  49%,
+  59%,
+  69%,
+  79%,
+  89%,
+  99% {
+    transform: translate(2px, -2px);
+  }
+}
+.projects {
+  text-align: center;
+  color: black;
+  padding: 50px 0;
+}
