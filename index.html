@@ -130,18 +130,26 @@
     <!--akhir moments-->
     <!-- awal contact-form -->
     <section id="contact-form">
+      
       <div class="wrapper">
-        <form action="">
+        
+        <form name="contact-form" action="">
+          
           <h3 id="contact">Contact Form</h3>
           <div class="input-box">
             <span class="icon"><ion-icon name="person"></ion-icon></span>
-            <input type="text" placeholder="username" required>
+            <input type="text" placeholder="username" name="nama" required >
           </div>
           <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="text" placeholder="message" required>
+            <input type="text" placeholder="message" name="pesan" required>
           </div>
           <button type="submit">Submit</button>
+          <button class="btn btn-loading d-none" type="button" style="color: #000;">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+          
         </form>
       </div>
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -177,9 +185,26 @@
       wv.getSettings().setLoadWithOverviewMode(true);
       wv.getSettings().setUseWideViewPort(true);
       wv.getSettings().setJavaScriptEnabled(true);</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz7RJb0PyFBk7BMxae9PLATdfPldVWJrQ5iuVGCQgL0w4q3n-NZcTIh9LMA2Rzty-STng/exec'
+  const form = document.forms['contact-form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+      if (response = true){
+        alert("Pesan Kamu Sudah Terkirim!");
+        location.reload();
+      }
+  })
+</script>
   </body>
   <footer>
     <p>&copy;2023 Ugissa Dwintara Acafela. All Rights Reserved </p>
+
     
   </footer>
 </html>
