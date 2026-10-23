@@ -1,83 +1,70 @@
-#contact-form {
+.contact-card {
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid #d8dcd3;
+  background: #fbfbf8;
+  box-shadow: 0 18px 55px rgba(16, 23, 21, 0.07);
+}
+
+.contact-card form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 250px;
+  flex-direction: column;
 }
-.wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 500px;
-  border: 5px solid #333;
-  border-radius: 10px;
+
+.contact-card label {
+  margin-bottom: 7px;
+  color: #404940;
+  font-size: 12px;
+  font-weight: 700;
 }
-.wrapper:hover {
-  border: 5px solid #0ef;
-  box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
-}
-h3 {
-  font-size: 2em;
-  text-align: center;
-  color: #fff;
-  transition: 0.5s;
-}
-.wrapper:hover h3 {
-  color: #0ef;
-}
-.input-box {
-  position: relative;
-  width: 320px;
-  margin: 30px 0;
-}
-.input-box input {
+
+.contact-card input,
+.contact-card textarea {
   width: 100%;
-  height: 50px;
-  background: transparent;
-  border: 2px solid #333;
-  outline: none;
-  border-radius: 5px;
-  font-size: 1em;
-  color: #fff;
-  padding: 0 10px 0 35px;
-  transition: 0.5s;
+  margin-bottom: 20px;
+  padding: 13px 14px;
+  border: 1px solid #d4d9d0;
+  border-radius: 2px;
+  outline: 0;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  resize: vertical;
+  transition: border-color 180ms ease;
 }
-.wrapper:hover .input-box input {
-  border: 2px solid #0ef;
-  box-shadow: 0 0 10 #0ef, inset 0 0 10 #0ef;
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: #71884f;
 }
-.input-box input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: #939990;
 }
-.input-box .icon {
-  position: absolute;
-  left: 10px;
-  color: #fff;
-  font-size: 1.2em;
-  line-height: 55px;
-  transition: 0.5s;
+
+.button-dark {
+  align-self: flex-start;
+  background: var(--ink);
+  color: var(--paper);
 }
-.wrapper:hover .input-box .icon {
-  color: #0ef;
+
+.button-dark:hover {
+  background: #34462c;
 }
-button {
-  position: relative;
-  width: 100%;
-  height: 45px;
-  background: #333;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  color: #fff;
-  font-weight: 500;
-  transition: 0.5s;
+
+.button-dark:disabled {
+  cursor: wait;
+  opacity: 0.65;
+  transform: none;
 }
-.wrapper:hover button {
-  background: #0ef;
-  color: #000;
-  box-shadow: 0 0 20px #0ef;
+
+.form-status {
+  min-height: 1.5em;
+  margin: 13px 0 0;
+  color: #405832;
+  font-size: 12px;
+}
+
+.form-status.is-error {
+  color: #a13b31;
 }
